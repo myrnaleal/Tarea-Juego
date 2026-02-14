@@ -198,3 +198,410 @@ fun GameTile(value: Int) {
         }
     }
 }
+/*package com.example.tarea01_profile
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+
+@Preview(showBackground = true)
+@Composable
+fun PantallaJuego() {
+
+    Column(
+        modifier = Modifier.fillMaxSize()
+            .background(Color(0xFFF2EFEA))
+            .padding(16.dp)
+    ) {
+
+        // TÍTULO
+        Text(text = "2048")
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // SCORE Y BEST
+        Row() {
+
+            Box(
+                modifier = Modifier
+                    .background(Color(0xFFD8D0C5))
+                    .padding(10.dp)
+            ) {
+                Column {
+                    Text("SCORE")
+                    Text("1692")
+                }
+            }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Box(
+                modifier = Modifier
+                    .background(Color(0xFFD8D0C5))
+                    .padding(10.dp)
+            ) {
+                Column {
+                    Text("BEST")
+                    Text("7000")
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(30.dp))
+
+        // TABLERO
+        Column(
+            modifier = Modifier
+                .background(Color(0xFFBCAFA0))
+                .padding(8.dp)
+        ) {
+
+            // FILA 1
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("4")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("32")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("8")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("32")
+                }
+            }
+
+            // FILA 2
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {}
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("16")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("64")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("4")
+                }
+            }
+
+            // FILA 3
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {}
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("2")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("128")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("64")
+                }
+            }
+
+            // FILA 4
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {}
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {}
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {
+                    Text("8")
+                }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) {}
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PantallaGameOver() {
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFFF2EFEA))
+            .padding(16.dp)
+    ) {
+
+        Text("Game Over")
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Text("7000 points scored in 476 moves.")
+        Text("2 powerups used")
+
+        Spacer(modifier = Modifier.height(30.dp))
+
+        // TABLERO
+
+        Column(
+            modifier = Modifier
+                .background(Color(0xFFBCAFA0))
+                .padding(8.dp)
+        ) {
+
+            // FILA 1
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("2") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("32") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("2") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("4") }
+            }
+
+            // FILA 2
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("4") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("64") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("4") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("128") }
+            }
+
+            // FILA 3
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("8") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("256") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("512") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("8") }
+            }
+
+            // FILA 4
+            Row {
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("4") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("8") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("2") }
+
+                Box(
+                    modifier = Modifier
+                        .size(60.dp)
+                        .padding(4.dp)
+                        .background(Color(0xFFCDC1B4))
+                ) { Text("4") }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // BOTONES SIMPLES
+        Row {
+
+            Box(
+                modifier = Modifier
+                    .background(Color(0xFF8F8173))
+                    .padding(10.dp)
+            ) {
+                Text("Play Again", color = Color.White)
+            }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Box(
+                modifier = Modifier
+                    .background(Color(0xFFEAE2D7))
+                    .padding(10.dp)
+            ) {
+                Text("Undo")
+            }
+        }
+    }
+}
+*/

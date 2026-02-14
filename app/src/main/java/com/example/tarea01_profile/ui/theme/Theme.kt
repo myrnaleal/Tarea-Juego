@@ -1,4 +1,4 @@
-package com.example.tarea01_profile.ui.theme
+/*package com.example.tarea01_profile.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -55,4 +55,4 @@ fun Tarea01ProfileTheme(
         typography = Typography,
         content = content
     )
-}
+}*/

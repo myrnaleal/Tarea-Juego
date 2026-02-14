@@ -1,4 +1,4 @@
-import androidx.compose.foundation.Image
+/*import androidx.compose.foundation.Image
 import androidx.compose.foundation.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -90,4 +90,4 @@ fun CastanScreen() {
 fun PreviewCastanScreen() {
     CastanScreen()
 }
-
+*/
